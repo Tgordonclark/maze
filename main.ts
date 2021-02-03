@@ -1,5 +1,38 @@
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouthWest, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterWest1, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterEast0, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorth0, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorthWest, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorthEast, function (sprite, location) {
+    game.over(false)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
     game.over(true)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterEast1, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouth0, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouth1, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouthEast, function (sprite, location) {
+    game.over(false)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorth1, function (sprite, location) {
+    game.over(false)
 })
 let mySprite = sprites.create(img`
     ........................
@@ -27,7 +60,7 @@ let mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Player)
-controller.moveSprite(mySprite, 100, 100)
+controller.moveSprite(mySprite, 9000, 9000)
 tiles.setTilemap(tilemap`level_1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 scene.cameraFollowSprite(mySprite)
