@@ -19,13 +19,13 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorthEast, func
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
     game.over(true)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterEast2, function (sprite, location) {
+    game.over(true, effects.confetti)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterEast1, function (sprite, location) {
     game.over(false)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouth0, function (sprite, location) {
-    game.over(false)
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouth1, function (sprite, location) {
     game.over(false)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterSouthEast, function (sprite, location) {
@@ -60,8 +60,8 @@ let mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Player)
-controller.moveSprite(mySprite, 9000, 9000)
+controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level_1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 scene.cameraFollowSprite(mySprite)
-info.startCountdown(10)
+info.startCountdown(1)
